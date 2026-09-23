@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Struktur</title>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Grundlegende Struktur</h1>
+            <h2>&lt;!DOCTYPE html&gt;</h2>
+            <p>Dokumententyp angeben, MUSS am Anfang der HTML-Datei definiert werden</p>
+            <h2>&lt;html lang="de"&gt;</h2>
+            <p>root-Tag, kennzeichnet Text innerhalb vom Container als HTML-Dokument</p>
+            <h2>&lt;head&gt;</h2>
+            <p>Enthält die Metainformationen und den Titel des Dokuments, alles das nicht sichtbar ist</p>
+            <h2>&lt;body&gt;</h2>
+            <p>Enthält alle Inhalte, die auf der Seite dargestellt werden</p>
+        </article>
+        <article id="headinhalt">
+            <h1>Inhalte in &lt;head&gt;</h1>
+            <h2>&lt;title&gt;</h2>
+            <p>Definiert den Namen des Tabs</p>
+            <h2>&lt;meta charset="UTF-8"&gt;</h2>
+            <p>Definiert die Zeichencodierung der Seite, siehe <a href="https://www.charset.org/utf-8">charset.org</a></p>
+            <h2>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</h2>
+            <p>Definiert die Größe der Seite<br/>
+            width=device-width: Breite der Seite = Gerätbreite<br/>
+                initial-scale=1.0: Größe auf 100% Zoom
+            </p>
+            <h2>&lt;link rel="icon" type="images/favicon" href="images/favicon.ico"</h2>
+            <p>Das kleine Icon im Tab definieren mit 16x16 Pixel oder 32x32 Pixel, Größe kann festgelegt
+            werden, muss aber quadratisch sein</p>
+        </article>
+        <article class="body-elemente">
+            <h1>Strukturelemente in &lt;body&gt;</h1>
+            <h2>&lt;header&gt;</h2>
+            <p>Kopfzeile der Seite</p>
+            <h2>&lt;main&gt;</h2>
+            <p>Hauptsächlicher Inhalt der Seite</p>
+            <h2>&lt;footer&gt;</h2>
+            <p>Fußzeile der Seite</p>
+            <h2>&lt;nav&gt;</h2>
+            <p>Navigationsleiste definieren</p>
+            <h2>&lt;section&gt;</h2>
+            <p>Thematischer Abschnitt</p>
+            <h2>&lt;article&gt;</h2>
+            <p>Inhaltlich geschlossener Abschnitt, z.B. Blogposts oder Artikel</p>
+            <h2>&lt;div&gt;</h2>
+            <p>Division, Containerelement ohne Bedeutung<br/>
+            Hat keinen festen Platz in der Hirarchie
+            </p>
+            <h2>&lt;aside&gt;</h2>
+            <p>Container für Zusatzinhalte, häufig seitlich auf der Website</p>
+        </article>
+        <article class="body-elemente">
+            <h1>Inhaltelemente in &lt;body&gt;</h1>
+            <h2>Überschriften</h2>
+            <h1>&lt;h1&gt;</h1>
+            <h2>&lt;h2&gt;</h2>
+            <h3>&lt;h3&gt;</h3>
+            <h4>&lt;h4&gt;</h4>
+            <h5>&lt;h5&gt;</h5>
+            <h6>&lt;h6&gt;</h6>
+
+            <h2>&lt;p&gt; (Paragraph)</h2>
+            <p>Unterteilt Texte in Paragraphe</p>
+            <p>Paragraph 2</p>
+
+            <h2>&lt;br /&gt;</h2>
+            <p>Zeilenumbruch innerhalb<br />
+                eines Textes</p>
+            <h2>&lt;hr /&gt;</h2>
+            <p>Horizontale Linie zwischen Elementen</p>
+            <hr/>
+
+            <h2>Listen</h2>
+            <h3>Unsortierte Liste</h3>
+            <ul>
+                <li>&lt;ul&gt; (unordered list) startet eine unsortierte Liste</li>
+                <li>&lt;li&gt; (list item) enthält einzelne Listeneinträge</li>
+            </ul>
+            <h3>Sortierte Liste</h3>
+            <ol>
+                <li>&lt;ol&gt; (oredered list) startet eine sortierte Liste</li>
+                <li>&lt;li&gt; (list item) enthält einzelne Listeneinträge</li>
+            </ol>
+            <h3>Beschreibungsliste</h3>
+            <dl>
+                <dt>&lt;dt&gt; (description term) Gruppe von Begriffen (z.B. Früchte)</dt>
+                <dd>&lt;dd&gt; (description) Beschreibungen, Elemente (z.B. Apfel, Birne, ...)</dd>
+                <dt>Gemüse</dt>
+                <dd>Karotte</dd>
+            </dl>
+            <h2>Links</h2>
+            <p><a href="#">&lt;a href="#"&gt;Linkname&lt;/a&gt;</a></p>
+            <p><a href="beispiel.html">Beispiel Interner Link</a></p>
+            <p><a href="#headinhalt">Beispiel Sprung innerhalb Seite zu Element mit der ID "headinhalt"</a></p>
+            <p>
+                Attribut "target"<br/>
+                <a href="beispiel.html" target="_self">Beispielseite in gleichem Tab geöffnet (default)</a><br/>
+                <a href="beispiel.html" target="_blank">Beispielseite in neuem Tab/Window geöffnet</a>
+            </p>
+            <h2>&lt;img&gt;</h2>
+            <p>Bild einbinden<br />
+            &lt;img src="pfad zum Bild" alt="Beschreibung des Bildes" width="Breite"/&gt;<br/>
+                <img src="image.png" alt="Beschreibung des Bild" width="400"/><br/>
+
+            </p>
+        </article>
+        <article>
+            <h1>Attribute</h1>
+            <h2>lang="de"</h2>
+            <p>Legt die Sprache innerhalb des Elements fest</p>
+            <h2>id="eindeutiger Name"</h2>
+            <p>Eindeutiger, frei wählbarer Bezeichner für ein Element</p>
+            <h2>class="eindeutiger Name für Gruppe"</h2>
+            <p>Frei wählbarer Bezeichner für eine Gruppe von Elementen</p>
+        </article>
+        <article>
+            <h1>Formattierung mit HTML</h1>
+            <h2>&lt;strong&gt;</h2>
+            <p>Text mit Informationen, die <strong>besonders wichtig</strong> sind!</p>
+            <p><b>Text fettgedruckt darstellen</b> mit &lt;b&gt; wird inzwischen eigentlich nicht mehr verwendet</p>
+            <h2>&lt;em&gt; (emphasis)</h2>
+            <p>Text mit Informationen, die <em>hervorgehoben</em> werden sollen</p>
+            <p><i>Text kursiv darstellen</i> mit &lt;i&gt; wird inzwischen eigentlich nicht mehr verwendet</p>
+            <h2>Text unterstreichen</h2>
+            <p><u>Text unterstreichen</u> wollen wir eigentlich nicht, weil Links unterstrichen sind</p>
+        </article>
+    </main>
+</body>
+</html>
